@@ -17,6 +17,14 @@ module PragmaticTokenizer
           text.gsub!(REGEXP_UNKNOWN2, ' ' << replacement)
           text.gsub!(/l\'/, '\1 l☮ \2')
           text.gsub!(/L\'/, '\1 L☮ \2')
+          text.gsub!(/d\'/, '\1 l☮ \2')
+          text.gsub!(/D\'/, '\1 L☮ \2')
+          text.gsub!(/s\'/, '\1 l☮ \2')
+          text.gsub!(/S\'/, '\1 L☮ \2')
+          text.gsub!(/m\'/, '\1 l☮ \2')
+          text.gsub!(/M\'/, '\1 L☮ \2')
+          text.gsub!(/t\'/, '\1 l☮ \2')
+          text.gsub!(/T\'/, '\1 L☮ \2')
           text
         end
       end
